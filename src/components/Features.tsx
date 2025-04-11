@@ -73,6 +73,9 @@ const Features = () => {
     },
   ];
 
+  // Get the active feature icon component
+  const ActiveIcon = features[activeFeature].icon;
+
   return (
     <section id="features" className="section-container">
       <div className="max-w-3xl mx-auto text-center mb-16">
@@ -98,7 +101,7 @@ const Features = () => {
         
         <div className="bg-gradient-to-br from-coffee-cream/50 to-background rounded-2xl p-8 flex flex-col justify-center animate-float-up" style={{opacity: 0}}>
           <h3 className="text-2xl font-bold mb-4 flex items-center">
-            <features[activeFeature].icon className="mr-3 h-6 w-6 text-coffee-light" />
+            <ActiveIcon className="mr-3 h-6 w-6 text-coffee-light" />
             {features[activeFeature].title}
           </h3>
           <p className="text-lg mb-6">{features[activeFeature].detail}</p>
