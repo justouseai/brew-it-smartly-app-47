@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -24,6 +25,12 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				coffee: {
+					dark: '#4A3C30',
+					medium: '#8C7566',
+					light: '#C87D55',
+					cream: '#F5F1EC',
+				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
@@ -84,11 +91,47 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fill-cup': {
+					'0%': {
+						height: '0%',
+						opacity: '0.7'
+					},
+					'100%': {
+						height: '80%',
+						opacity: '1'
+					}
+				},
+				'steam': {
+					'0%': {
+						transform: 'translateY(0) translateX(0)',
+						opacity: '0'
+					},
+					'50%': {
+						opacity: '0.8'
+					},
+					'100%': {
+						transform: 'translateY(-10px) translateX(5px)',
+						opacity: '0'
+					}
+				},
+				'float-up': {
+					'0%': {
+						transform: 'translateY(20px)',
+						opacity: '0'
+					},
+					'100%': {
+						transform: 'translateY(0)',
+						opacity: '1'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fill-cup': 'fill-cup 2s ease-out forwards',
+				'steam': 'steam 2s ease-in-out infinite',
+				'float-up': 'float-up 0.7s ease-out forwards'
 			}
 		}
 	},
