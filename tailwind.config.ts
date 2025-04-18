@@ -25,11 +25,12 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
-				coffee: {
-					dark: '#4A3C30',
-					medium: '#8C7566',
-					light: '#C87D55',
-					cream: '#F5F1EC',
+				law: {
+					dark: '#32302C',      // Dirt brown (darker shade)
+					medium: '#A67C52',    // Burnt yellow/brown
+					light: '#C85A40',     // Terracotta
+					accent: '#D9A566',    // Burnt yellow
+					paper: '#F7F3EE',     // Light cream/paper color
 				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
@@ -92,14 +93,20 @@ export default {
 						height: '0'
 					}
 				},
-				'fill-cup': {
+				'document-progress': {
 					'0%': {
-						height: '0%',
-						opacity: '0.7'
+						width: '0%',
 					},
 					'100%': {
-						height: '80%',
-						opacity: '1'
+						width: '100%',
+					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+					},
+					'100%': {
+						opacity: '1',
 					}
 				},
 				'steam': {
@@ -129,7 +136,8 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fill-cup': 'fill-cup 2s ease-out forwards',
+				'document-progress': 'document-progress 1.5s ease-out forwards',
+				'fade-in': 'fade-in 0.5s ease-out forwards',
 				'steam': 'steam 2s ease-in-out infinite',
 				'float-up': 'float-up 0.7s ease-out forwards'
 			}

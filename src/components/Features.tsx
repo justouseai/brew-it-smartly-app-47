@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Clock, Smartphone, BookOpen, Bell } from 'lucide-react';
+import { Clock, FileCheck, MailCheck, Bell } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 const FeatureCard = ({ 
@@ -21,8 +21,8 @@ const FeatureCard = ({
       className={`
         p-6 rounded-xl transition-all duration-300 cursor-pointer
         ${isActive 
-          ? 'bg-coffee-light/10 border border-coffee-light/30 shadow-lg' 
-          : 'bg-background hover:bg-coffee-cream/50 border border-transparent'
+          ? 'bg-law-light/10 border border-law-light/30 shadow-lg' 
+          : 'bg-background hover:bg-law-paper/50 border border-transparent'
         }
       `}
       onClick={onClick}
@@ -30,7 +30,7 @@ const FeatureCard = ({
       <div className="flex items-start">
         <div className={`
           p-3 rounded-lg mr-4
-          ${isActive ? 'bg-coffee-light text-white' : 'bg-coffee-cream text-coffee-dark'}
+          ${isActive ? 'bg-law-light text-white' : 'bg-law-paper text-law-dark'}
         `}>
           <Icon className="h-6 w-6" />
         </div>
@@ -48,28 +48,28 @@ const Features = () => {
   
   const features = [
     {
+      icon: FileCheck,
+      title: "Automated Certificate Retrieval",
+      description: "Get legal certificates from government websites with just a CNPJ number.",
+      detail: "Our system connects directly to official government databases to retrieve certificates automatically. No more navigating complex websites or filling out repetitive forms. Just enter the CNPJ once and let our system handle the rest.",
+    },
+    {
       icon: Clock,
-      title: "Automatic Brew Timer",
-      description: "Schedule your coffee to brew at specific times, even on recurring days of the week.",
-      detail: "Never wake up to an empty coffee pot again. With SmartBrew's precision timer, you can set your coffee to start brewing before your alarm goes off. Schedule daily brews for workdays, different times for weekends, or one-time special occasions.",
+      title: "Real-time Progress Tracking",
+      description: "Monitor the status of your certificate retrieval in real-time.",
+      detail: "Watch as your certificate is processed through our system with a clean, informative progress display. You'll know exactly what's happening at each step, from connection to government systems to document verification and delivery.",
     },
     {
-      icon: Smartphone,
-      title: "Remote Control",
-      description: "Start, stop, or adjust your coffee brewing from anywhere with your phone.",
-      detail: "Forgot to set the timer? No problem. With SmartBrew's remote control feature, you can start brewing while still in bed, on your commute home, or from anywhere with an internet connection. Full control in the palm of your hand.",
-    },
-    {
-      icon: BookOpen,
-      title: "Recipe Customization",
-      description: "Create and save your perfect coffee recipes with precise measurements.",
-      detail: "Everyone has their perfect cup. SmartBrew lets you fine-tune water temperature, brew strength, and even pre-infusion times. Save multiple recipes for different moods or family members, and switch between them with a tap.",
+      icon: MailCheck,
+      title: "Instant Email Delivery",
+      description: "Receive certificates directly in your inbox as soon as they're ready.",
+      detail: "Once retrieved, certificates are immediately sent to your specified email address in professional, organized format. They're ready to use, share, or archive according to your needs, with no additional formatting required.",
     },
     {
       icon: Bell,
-      title: "Inventory Alerts",
-      description: "Get notified when you're running low on coffee beans, water, or filters.",
-      detail: "SmartBrew's sensors monitor your coffee maker's status and send timely alerts when supplies are running low. Never be caught without your morning coffee essentials again. The app also tracks usage patterns to predict when you'll need to restock.",
+      title: "Expiration Reminders",
+      description: "Get alerted when your certificates are about to expire.",
+      detail: "Never miss a renewal deadline again. Our system tracks expiration dates of all retrieved certificates and sends timely reminders, ensuring your legal documentation is always current and compliant with regulatory requirements.",
     },
   ];
 
@@ -79,9 +79,9 @@ const Features = () => {
   return (
     <section id="features" className="section-container">
       <div className="max-w-3xl mx-auto text-center mb-16">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">Smart Features for Coffee Lovers</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">Streamlined Certificate Management</h2>
         <p className="text-lg text-muted-foreground">
-          Control every aspect of your brewing experience with technology designed around your coffee routine.
+          Designed for legal professionals who value efficiency and precision in document processing.
         </p>
       </div>
       
@@ -99,13 +99,13 @@ const Features = () => {
           ))}
         </div>
         
-        <div className="bg-gradient-to-br from-coffee-cream/50 to-background rounded-2xl p-8 flex flex-col justify-center animate-float-up" style={{opacity: 0}}>
+        <div className="bg-gradient-to-br from-law-paper/50 to-background rounded-2xl p-8 flex flex-col justify-center animate-float-up" style={{opacity: 0}}>
           <h3 className="text-2xl font-bold mb-4 flex items-center">
-            <ActiveIcon className="mr-3 h-6 w-6 text-coffee-light" />
+            <ActiveIcon className="mr-3 h-6 w-6 text-law-light" />
             {features[activeFeature].title}
           </h3>
           <p className="text-lg mb-6">{features[activeFeature].detail}</p>
-          <Button className="bg-coffee-light hover:bg-coffee-medium text-white w-fit">
+          <Button className="bg-law-light hover:bg-law-medium text-white w-fit">
             Learn More
           </Button>
         </div>

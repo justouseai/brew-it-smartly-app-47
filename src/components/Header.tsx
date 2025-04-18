@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Coffee } from "lucide-react";
+import { Scale, PanelTop } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,19 +11,20 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
-            <Coffee className="h-8 w-8 text-coffee-light" />
-            <span className="ml-2 text-xl font-bold">SmartBrew</span>
+            <Scale className="h-8 w-8 text-law-light" />
+            <span className="ml-2 text-xl font-bold">Certify<span className="text-law-light">Legal</span></span>
           </div>
           
           <nav className="hidden md:flex space-x-8">
             <a href="#features" className="text-foreground/80 hover:text-foreground transition-colors">Features</a>
             <a href="#how-it-works" className="text-foreground/80 hover:text-foreground transition-colors">How It Works</a>
-            <a href="#testimonials" className="text-foreground/80 hover:text-foreground transition-colors">Testimonials</a>
+            <a href="#about" className="text-foreground/80 hover:text-foreground transition-colors">About</a>
+            <a href="#contact" className="text-foreground/80 hover:text-foreground transition-colors">Contact</a>
           </nav>
           
           <div className="hidden md:block">
-            <Button className="bg-coffee-light hover:bg-coffee-medium text-white">
-              Download App
+            <Button className="bg-law-light hover:bg-law-medium text-white">
+              Get Started
             </Button>
           </div>
           
@@ -66,17 +67,24 @@ const Header = () => {
                 How It Works
               </a>
               <a 
-                href="#testimonials" 
+                href="#about" 
                 className="text-foreground/80 hover:text-foreground transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Testimonials
+                About
               </a>
-              <Button 
-                className="bg-coffee-light hover:bg-coffee-medium text-white w-full"
+              <a 
+                href="#contact" 
+                className="text-foreground/80 hover:text-foreground transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
-                Download App
+                Contact
+              </a>
+              <Button 
+                className="bg-law-light hover:bg-law-medium text-white w-full"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Get Started
               </Button>
             </nav>
           </div>
