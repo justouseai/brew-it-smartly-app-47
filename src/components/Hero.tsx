@@ -1,7 +1,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import { Button } from "@/components/ui/button";
-import { ArrowRight, SearchCheck } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import CertificateForm from './CertificateForm';
 
 const Hero = () => {
@@ -42,10 +42,7 @@ const Hero = () => {
             
             <div className="flex flex-wrap gap-4">
               <Button className="bg-law-light hover:bg-law-medium text-white text-lg px-6 py-6">
-                Get Started <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button variant="outline" className="text-lg px-6 py-6">
-                How It Works <SearchCheck className="ml-2 h-5 w-5" />
+                Retrieve Certificate <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </div>
           </div>
@@ -53,7 +50,6 @@ const Hero = () => {
           <div className="relative flex justify-center">
             <div className="relative w-64 h-64 sm:w-80 sm:h-80">
               <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full md:w-80">
-                {/* Certificate Form Module */}
                 <CertificateForm />
               </div>
             </div>
